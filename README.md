@@ -73,7 +73,7 @@
 19. Take note of the **Connect** settings. You'll need them soon.
 
 
-## [Connecting to your DocumentDB cluster]()
+## 03. [Connecting to your DocumentDB cluster](03_connecting/connecting.md)
 
 20. Make sure your EC2 instance (Step 2) is running
 
