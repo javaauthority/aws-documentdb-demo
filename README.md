@@ -64,4 +64,11 @@
     
 17. Click on the Create Cluster button
 
-18. 
+18. Wait for your cluster to be created... count to 100. If not created, repeat.
+
+19. Take note of the **Connect** settings. You'll need them soon.
+
+
+## Connecting to your DocumentDB cluster
+
+20. 
