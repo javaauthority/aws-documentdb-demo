@@ -10,7 +10,10 @@
 
 3.  Create a Security Group for DocumentDB
 
-    * Add an inbound "Custom TCP Rule", Protocol "TCP", Port Range "27017-27019", Source "EC2 Instance S.G." (step 2)
+    * Add an inbound "Custom TCP Rule" 
+         *  Protocol "TCP" 
+         *  Port Range "27017-27019" 
+         *  Source "EC2 Instance S.G." (see Step 2)
 
 4.  Go to DocumentDB (https://console.aws.amazon.com/docdb/home)
 
