@@ -53,22 +53,34 @@
     
     * Enable it and choose the KMS Key
     
-    
+    ![Image of Create Cluster - Encryption-At-Rest](encryption.png)
     
 14. **Backup:**
 
     * Choose your backup retention period and backup window
     
+    ![Image of Create Cluster - Backup](backup.png)
+    
 15. **Log Exports:**
 
     * Enable it if needed
+    
+    ![Image of Create Cluster - Log Exports](logexports.png)
     
 16. **Maintenance:**
 
     * Select your maintenance window
     
+    ![Image of Create Cluster - Maintenance](maintenance.png)
+    
 17. Click on the Create Cluster button
+
+    ![Image of Create Cluster - Create Cluster](createcluster_end.png)
 
 18. Wait for your cluster to be created... count to 100. If not created, repeat.
 
+    ![Image of Create Cluster - Waiting...](waiting.png)
+
 19. Take note of the **Connect** settings. You'll need them soon.
+
+    ![Image of Create Cluster - Connect](connect.png)
