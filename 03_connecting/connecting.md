@@ -33,7 +33,7 @@
 
     *  mongo --sslAllowInvalidHostnames --ssl --sslCAFile /path/to/rds-combined-ca-bundle.pem --username USER_NAME --password PWD
     
-26. Issue a few commands
+26. Issue a few MongoDB commands
 
     ```
     use demo
@@ -44,7 +44,7 @@
     db.aws.find()
     ```
     
-27. TEAR DOWN YOUR CLUSTER!!!
+27. ### TEAR DOWN YOUR CLUSTER!!!
 
     * Go to Instances
     * Choose whether or not you want to create a final snapshot
