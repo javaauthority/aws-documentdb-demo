@@ -1,11 +1,11 @@
 # Repository for the AWS DocumentDB Demo
 
 
-## VPC Setup
+## 01. [VPC Setup](01_vpc_setup/vpcsetup.md)
 
 1.  Create a VPC with at least 1 public subnet and at least 2 private subnets (https://console.aws.amazon.com/vpc/home)
 
-2.  Create an EC2 instance and choose the public subnet. 
+2.  Create an EC2 instance to serve as a JumpBox and choose the public subnet. 
 
     *   Download the SSH key. You'll need it to connect to the instance
     *   Take note of the Security Group created for your instance
@@ -17,7 +17,7 @@
          *  Port Range: 27017-27019 
          *  Source: EC2 Instance Security Group (see Step 2)
 
-## DocumentDB Setup
+## 02. [DocumentDB Setup](02_documentdb_setup/documentdbsetup.md)
 
 4.  Go to DocumentDB (https://console.aws.amazon.com/docdb/home)
 
