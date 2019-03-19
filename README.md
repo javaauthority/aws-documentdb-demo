@@ -10,10 +10,10 @@
 
 3.  Create a Security Group for DocumentDB
 
-    * Add an inbound "Custom TCP Rule" 
-         *  Protocol "TCP" 
-         *  Port Range "27017-27019" 
-         *  Source "EC2 Instance S.G." (see Step 2)
+    * Add an Inbound "Custom TCP Rule" 
+         *  Protocol: TCP 
+         *  Port Range: 27017-27019 
+         *  Source: EC2 Instance Security Group (see Step 2)
 
 4.  Go to DocumentDB (https://console.aws.amazon.com/docdb/home)
 
@@ -25,15 +25,43 @@
 
 8.  **Configuration:** 
 
-    *   Choose a name (cluster identifier)
-    *   Choose your instance class (r4 types) (pricing at https://aws.amazon.com/ec2/pricing/on-demand/)
-    *   Choose the number of instances (minimum of three)
+    * Choose a name (cluster identifier)
+    * Choose your instance class (r4 types) (pricing at https://aws.amazon.com/ec2/pricing/on-demand/)
+    * Choose the number of instances (minimum of three)
 
 9.  **Authentication:**
 
-    *   Choose a Master username
-    *   Choose a Master password and confirm it
+    * Choose a Master username
+    * Choose a Master password and confirm it
     
 10. Click on Show advanced settings
 
-11.  
+11. **Network Settings:**
+
+    * Choose your VPC
+    * Choose the Subnet Group you defined in Step 5
+    * Choose the Security Group you defined in Step 3
+
+12. **Cluster Options:**
+    
+    * Choose the Parameter Group you defined in Step 6
+    
+13. **Encryption-at-rest:**
+    
+    * Enable it and choose the KMS Key
+    
+14. **Backup:**
+
+    * Choose your backup retention period and backup window
+    
+15. **Log Exports:**
+
+    * Enable it if needed
+    
+16. **Maintenance:**
+
+    * Select your maintenance window
+    
+17. Click on the Create Cluster button
+
+18. 
