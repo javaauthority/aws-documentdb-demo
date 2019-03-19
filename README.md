@@ -79,11 +79,20 @@
 
 22. Download the AWS RDS' key (https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem)
 
-23. Add the AWS RDS key to your java keystore
 
-    * cd $JAVA_HOME/jre/lib/security
-    * sudo keytool -importcert -trustcacerts -file /path/to/rds-combined-ca-bundle.pem -keystore cacerts
-    * default pwd is changeit
+23. If using Java, do the following:
+
+    * Add the AWS RDS key to your java keystore
+      * cd $JAVA_HOME/jre/lib/security
+      * sudo keytool -importcert -trustcacerts -file /path/to/rds-combined-ca-bundle.pem -keystore cacerts
+      * default pwd is changeit
+      
+      * Sample Java code:
+        * ```MongoCredential mongoCredential = MongoCredential.createScramSha1Credential(USERNAME, "test", PASSWORD.toCharArray());``` 
+        * ```credentials.add(mongoCredential);```
+        * ```MongoClientOptions mongoClientOptions = MongoClientOptions.builder().sslInvalidHostNameAllowed(true).sslEnabled(true).build();``` 
+        * ```ServerAddress serverAddress = new ServerAddress("localhost"); ```
+        * ```mongoClient = new MongoClient(serverAddress, credentials, mongoClientOptions);```
 
 24. Install MongoDB via brew (https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
 
