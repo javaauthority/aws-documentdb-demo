@@ -50,3 +50,7 @@
     * Choose whether or not you want to create a final snapshot
     * Click the checkbox Acknowledgement that you want to delete the cluster
     * Type "delete entire cluster"
+
+    ![Image of Delete Cluster - Show Instances](instances.png)
+    ![Image of Delete Cluster - Delete One Instance](deleteme.png)
+    ![Image of Delete Cluster - Delete Entire Cluster](deleteentirecluster.png)
