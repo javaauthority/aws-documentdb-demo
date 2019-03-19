@@ -4,15 +4,19 @@
 
 21. Create an SSH Tunnel to your EC2 instance
 
-    * ssh -i /Users/you/.ssh/YOUR_PVT_KEY -L 27017:HOST_NAME:27017 ec2-user@EC2_INSTANCE_IP_ADDRESS -N
+   ```
+   ssh -i /Users/you/.ssh/YOUR_PVT_KEY -L 27017:HOST_NAME:27017 ec2-user@EC2_INSTANCE_IP_ADDRESS -N
+   ```
 
 22. Download the AWS RDS' key (https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem)
 
 23. If using Java, do the following:
 
     * Add the AWS RDS key to your java keystore
-      * cd $JAVA_HOME/jre/lib/security
-      * sudo keytool -importcert -trustcacerts -file /path/to/rds-combined-ca-bundle.pem -keystore cacerts
+      ``` 
+      cd $JAVA_HOME/jre/lib/security
+      sudo keytool -importcert -trustcacerts -file /path/to/rds-combined-ca-bundle.pem -keystore cacerts
+      ```
       * default pwd is changeit
       
       * Sample Java code:
