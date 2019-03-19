@@ -1,5 +1,7 @@
-# aws-documentdb-demo
-## Demo repo for AWS DocumentDB
+# Repository for the AWS DocumentDB Demo
+
+
+## VPC Setup
 
 1.  Create a VPC with at least 1 public subnet and at least 2 private subnets (https://console.aws.amazon.com/vpc/home)
 
@@ -14,6 +16,8 @@
          *  Protocol: TCP 
          *  Port Range: 27017-27019 
          *  Source: EC2 Instance Security Group (see Step 2)
+
+## DocumentDB Setup
 
 4.  Go to DocumentDB (https://console.aws.amazon.com/docdb/home)
 
@@ -79,7 +83,6 @@
 
 22. Download the AWS RDS' key (https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem)
 
-
 23. If using Java, do the following:
 
     * Add the AWS RDS key to your java keystore
@@ -88,8 +91,8 @@
       * default pwd is changeit
       
       * Sample Java code:
-        * ```MongoCredential mongoCredential = MongoCredential.createScramSha1Credential(USERNAME, "test", PASSWORD.toCharArray());``` 
-        * ```credentials.add(mongoCredential);```
+        * ```MongoCredential mongoCredential = MongoCredential.createScramSha1Credential(USERNAME, "test", PASSWORD.toCharArray()); 
+        credentials.add(mongoCredential);```
         * ```MongoClientOptions mongoClientOptions = MongoClientOptions.builder().sslInvalidHostNameAllowed(true).sslEnabled(true).build();``` 
         * ```ServerAddress serverAddress = new ServerAddress("localhost"); ```
         * ```mongoClient = new MongoClient(serverAddress, credentials, mongoClientOptions);```
